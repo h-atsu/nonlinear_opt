@@ -89,7 +89,7 @@ def goldstein_condtion(f, df, xk, dk, c, alpha):
     return flag_goldstein
 
 
-def backtracking(f, df, xk, dk, rho=4 / 5, alpha0=1):
+def backtracking(f, df, xk, dk, rho=99 / 100, alpha0=100):
     """Parameters
     ----------
     f : callable
@@ -115,16 +115,15 @@ def backtracking(f, df, xk, dk, rho=4 / 5, alpha0=1):
     """
     alpha = alpha0
     iter_num = 0
-    while not armijo_condtion(f, df, xk, dk, c1=0.1, alpha=alpha):
-
+    while not wolf_condtion(f, df, xk, dk, c1=0.1, c2=0.99,alpha=alpha):
+#        print(alpha)
         alpha *= rho
         iter_num += 1
-        assert iter_num < 100
+        assert iter_num < 1000
 
     return alpha
 
 
 if __name__ == '__main__':
     x = np.array([0])
-    print(type(x))
-    print(armijo_condtion(lambda x: (x - 1) * x, lambda x: 2 * x - 1, np.array([0]), np.array([1]), 0, np.array([1.1])))
+    print(wolf_condtion(lambda x: (x - 1) * x, lambda x: 2 * x - 1, np.array([0]), np.array([1]), 0.1, 0.5, np.array([1 / 10])))
