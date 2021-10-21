@@ -115,8 +115,8 @@ def backtracking(f, df, xk, dk, rho=99 / 100, alpha0=100):
     """
     alpha = alpha0
     iter_num = 0
-    while not wolf_condtion(f, df, xk, dk, c1=0.1, c2=0.99,alpha=alpha):
-#        print(alpha)
+    while not armijo_condtion(f, df, xk, dk, c1=0.1, alpha=alpha):
+        #        print(alpha)
         alpha *= rho
         iter_num += 1
         assert iter_num < 1000

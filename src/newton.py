@@ -19,7 +19,7 @@ class Optimizer:
         hesse = self.ddf(x)
         path.append(x)
         while (grad**2).sum() > self.eps**2:
-            x = x - np.linalg.inv(hesse) @ grad
+            x = x - np.linalg.solve(hesse, grad)
             grad = self.df(x)
             hesse = self.ddf(x)
             path.append(x)
