@@ -8,7 +8,7 @@
 - [ ] wolf条件の失敗した時の挙動についてのパラメータ探索について
 - [ ] result型の作成(return として評価回数, iteration num, assertion flag) 
 - [ ] logginの作成
-- [ ] AdaBoostの実装(PRML記述)
+- [x] AdaBoostの実装(PRML記述)
 - [ ] Simple Back Propagation Algorithmの実装
 - [ ] ニュートン法派生系の実装(修正ニュートン法,GN method etc...)
 - [ ] 準ニュートン法
