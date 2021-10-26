@@ -6,13 +6,12 @@
 - [x] 二次凸最適化以外の目的関数
 - [x] 直線探索
 - [ ] wolf条件の失敗した時の挙動についてのパラメータ探索について
-- [ ] result型の作成(return として評価回数, iteration num, assertion flag) 
-- [ ] logginの作成
+- [ ] loggingの作成
 - [x] AdaBoostの実装(PRML記述)
-- [ ] Simple Back Propagation Algorithmの実装
-- [ ] ニュートン法派生系の実装(修正ニュートン法,GN method etc...)
+- [ ] Simple Back Propagation Algorithmの実装(autograd?)
+- [x] 修正ニュートン法
 - [ ] 準ニュートン法
-- [ ] 共役勾配法
+- [x] 共役勾配法
 - [ ] 制約あり最適化アルゴリズム
 - [ ] ユニットテスト
 - [ ] 可視化コード
