@@ -16,3 +16,7 @@
 - [ ] ユニットテスト
 - [ ] 可視化コード
 - [ ] Pytorch auto gradを用いてgradient, hessian を陽に書かなくても最適化を実行できるように改良
+
+# 参考
+最適化コードの可視化にこれを参考にする
+http://louistiao.me/notes/visualizing-and-animating-optimization-algorithms-with-matplotlib/
